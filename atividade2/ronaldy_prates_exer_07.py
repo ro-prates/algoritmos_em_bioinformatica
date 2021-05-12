@@ -36,4 +36,4 @@ for linha in range(5):
             trocas += 1
             print(f'a posição {contador} foi trocado {sequenciaA[linha][coluna]} --> {sequenciaB[linha][coluna]}')
 
-print(f'o número de nucleotídeos diferente é {trocas}')
+print(f'o número de nucleotídeos diferentes é {trocas}')
