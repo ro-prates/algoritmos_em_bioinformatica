@@ -17,13 +17,7 @@ sequenciaB = []
 for linha in linhas:
     if linha.find('>') != 0: # vai ignorar as linhas que não são importantes
         sequenciaB.append(linha)
-
-# for i in range(5):
-#     primeiro = sequenciaA[i]
-#     segundo = sequenciaB[i]
-#     for a in range(60):
-#         if primeiro[a] != segundo[a]:
-#             
+         
 contador = 0
 trocas = 0
 
