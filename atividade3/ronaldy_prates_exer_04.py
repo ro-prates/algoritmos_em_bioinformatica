@@ -1,7 +1,9 @@
+n = int(input('informe quantas pessoas você deseja cadastrar:\n'))
+
 cadastro = dict()
 lista = []
 
-while True:
+for i in range(n):
     cadastro.clear()
     cadastro['nome'] = input('digite o nome da pessoa:\n')
     cadastro['sexo'] = input('digite o sexo da pessoa:\n')
@@ -10,11 +12,23 @@ while True:
 
     lista.append(cadastro)
 
-    continua = int(input('1- continuar\n2- encerrar\n'))
-    if continua == 2:
-        break
+print(f'quantidade de pessoas cadastradas: {n}')
 
-print(lista)
+peso_medio = 0.0
+altura_media = 0.0
+imc = 0.0
+imc_media = 0.0
 
 for i in lista:
-    print(i['peso'])
+    peso_medio += i['peso']
+    altura_media += i['altura']
+    imc = i['peso'] / i['altura'] ** 2 
+    imc_media += imc
+
+peso_medio = peso_medio / n
+altura_media = altura_media / n
+imc_media = imc_media / n
+
+print(f'peso médio: {peso_medio:.2f}')
+print(f'altura média: {altura_media:.2f}')
+print(f'IMC média: {imc_media:.2f}')
