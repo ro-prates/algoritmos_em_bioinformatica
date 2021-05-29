@@ -8,4 +8,5 @@ for i in range(80):
     vetor.append(intervalo)
     intervalo += 8*pi/80
 
-print(vetor)
+for i in vetor:
+    print(f'{i:.2f}')
