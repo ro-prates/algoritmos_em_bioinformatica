@@ -1,5 +1,6 @@
 vetor = []
 
+# inserindo os valores no vetor
 for i in range(100):
     vetor.append(i)
 

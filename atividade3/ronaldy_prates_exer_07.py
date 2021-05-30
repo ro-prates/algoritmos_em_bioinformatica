@@ -2,6 +2,7 @@ from numpy import random
 import numpy as np
 from math import sin
 
+# criando a matriz com os valores aleatórios
 matrix = np.random.randint(-10, 65, size=(4, 5))
 
 print('\nvalores aleatórios:\n')
