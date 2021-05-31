@@ -9,15 +9,13 @@ while True:
     except ValueError:
         print('atenção!!! digite apenas números inteiros e não negativos')
 
-# dicionário para salvar as pessoas individualmente
-cadastro = dict()
-
 # lista para armazenar todos os dicionários
 lista = []
 
 for i in range(n):
-    # limpando o dicionário para salvar o próximo cadastro
-    cadastro.clear()
+
+    # dicionário para salvar as pessoas individualmente
+    cadastro = dict()
 
     # salvando as informações das pessoas
     cadastro['nome'] = input('digite o nome da pessoa:\n')
@@ -40,13 +38,13 @@ imc_media = 0.0
 for i in lista:
     peso_medio += i['peso']
     altura_media += i['altura']
-    imc = i['peso'] / i['altura'] ** 2 
+    imc = i['peso'] / (i['altura'] ** 2 )
     imc_media += imc
 
 peso_medio = peso_medio / n
 altura_media = altura_media / n
 imc_media = imc_media / n
 
-print(f'peso médio: {peso_medio:.2f}')
-print(f'altura média: {altura_media:.2f}')
-print(f'IMC média: {imc_media:.2f}')
+print(f'peso médio: {peso_medio:.2f}kg')
+print(f'altura média: {altura_media:.2f}m')
+print(f'IMC média: {imc_media:.2f}kg/m²')

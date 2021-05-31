@@ -1,11 +1,13 @@
-vetor = []
+import numpy as np
 
-# inserindo os valores no vetor
-for i in range(100):
-    vetor.append(i)
+n = int(input('digite o tamanho do seu vetor:\n'))
 
-indice = 0
+# criando o vetor aleatório
+vetor = np.random.randint(0, 1000, size = n)
 
-for i in range(len(vetor)):
-    print(vetor[indice])
-    indice += 2
+print('valores da lista:')
+print(vetor)
+
+print('valores com o índice par:')
+for i in range(0, len(vetor), 2):
+    print(vetor[i])

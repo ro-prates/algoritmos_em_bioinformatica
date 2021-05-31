@@ -1,6 +1,6 @@
 from math import pi, sin, cos, tan
 import numpy as np
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 
 # definindo o intervalo
 intervalo = 4 * pi / 150
@@ -11,17 +11,19 @@ y = np.sin(x)
 z = np.cos(x)
 w = np.tan(x)
 
+figura = plt.figure(figsize=(7, 7))
+
 # plotando o gráfico do seno
-plt.plot(x, y, color='red')
+seno = figura.add_subplot(2, 2, 1)
+seno.plot(x, y, color='red')
 plt.title('função seno(x)')
-plt.show()
 
 # plotando o gráfico do cosseno
-plt.bar(x, z)
+cosseno = figura.add_subplot(2, 2, 2)
+cosseno.bar(x, z)
 plt.title('função cos(x)')
-plt.show()
 
 # plotando o gráfico da tangente
-plt.plot(x, w, 'o')
+tangente = figura.add_subplot(2, 2, 3)
+tangente.plot(x, w, 'o')
 plt.title('função tg(x)')
-plt.show()

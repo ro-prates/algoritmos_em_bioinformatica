@@ -9,14 +9,14 @@ def fatorial(n):
 valores = []
 
 # lista para ter o controle dos valores que serão digitados
-for i in range(1000):
+for i in range(50):
     valores.append(str(i))
 
 numero = input('digite um valor:\n')
 
 # verificando se o valor digitado corresponde a restrição
 while numero not in valores:
-    numero = input('digite um valor inteiro entre 0 e 1000:\n')
+    numero = input('digite um valor inteiro entre 0 e 50:\n')
 
 # convertendo o valor para inteiro
 numero = int(numero)

@@ -1,7 +1,8 @@
 # função que verifica se os números são múltiplos 
 def multiplo(primeiro, segundo):
-    if primeiro % segundo == 0:
-        return True
+    if segundo != 0:
+        if primeiro % segundo == 0:
+            return True
     return False
 
 # verificando se os números são inteiros
