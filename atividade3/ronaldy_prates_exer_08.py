@@ -1,6 +1,6 @@
 from math import pi, sin, cos, tan
 import numpy as np
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 
 # definindo o intervalo
 intervalo = 4 * pi / 150
