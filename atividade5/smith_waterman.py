@@ -1,5 +1,4 @@
 # pontuação definida pelo exercício
-
 gap = -2
 mismatch = -1
 match = 1
@@ -61,6 +60,7 @@ def smith_waterman(s1, s2):
         for j in range(1, colunas):
             matriz[i][j] = valor_maximo(i, j)
     
+    # variáveis para armazear a resposta
     resultado_s1 = ''
     resultado_s2 = ''
     i = informacao_valor_maximo[1]
@@ -88,17 +88,16 @@ def smith_waterman(s1, s2):
     resultado_s1 = resultado_s1[::-1]
     resultado_s2 = resultado_s2[::-1]
 
-    print(f'Sequência 1: {resultado_s1}')
-
     for i in range(linhas):
 	    print(' '.join(str(i) for i in matriz[i]))
+    
+    print(f'\nResposta 1: {resultado_s1}')
+    print(f'Resposta 2: {resultado_s2}')
 
     return (resultado_s1, resultado_s2)
 
 # sequencias s1 e s2
-
 s1 = input('digite a sequencia S1:\n')
 s2 = input('digite a sequencia S2:\n')
 
-#s1 = 'CTAGTAAGAGTT'
-#s2 = 'CTAAAGAAGTTA'
+smith_waterman(s2, s1)
